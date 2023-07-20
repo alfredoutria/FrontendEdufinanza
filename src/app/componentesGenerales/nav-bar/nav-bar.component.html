@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+  <div class="container-fluid" >
+    <a class="navbar-brand" href="#">Edufinanzas</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+     <img src="../../../assets/iconos/iconoMenu.png" width="48px">
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav" style="color: white !important;">
+        <li class="nav-item">
+          <a class="nav-link " href="inicio" routerLinkActive="active">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ahorro" routerLinkActive="active" style="color: white !important;">Ahorro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="inversion" routerLinkActive="active">Inversión</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="credito" routerLinkActive="active">Credito</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="registrarse" routerLinkActive="active">Registrarse</a>
+        </li>
+        <div class="{{divSesion}}">
+          <div>{{Miusuario}}</div>
+          <div (click)="cerrarSesion()" class="cerrarSesion">{{Sesion}}</div>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>

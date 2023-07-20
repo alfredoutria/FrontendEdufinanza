@@ -1,0 +1,185 @@
+.container{
+    background: rgb(6, 145, 131);
+    max-width: 100%;
+    width: 100%;
+    height: 400px;
+    color:rgb(255, 255, 255);
+    text-align: center;
+
+}
+
+.row{
+  width: 100%;
+ 
+}
+
+#col{
+    margin-top: 5% !important;
+  
+}
+
+.labelCredito{
+    font-family: 'Caprasimo';
+    font-size: 70px;
+    padding: 10px;
+    border-bottom: 5px solid rgb(255, 255, 255);
+    text-align: center;
+    width: 70%;
+    margin: 0px auto;
+    
+
+   
+}
+
+.labelCreditoParrafo{
+    font-size: 25px;
+    margin-left: 50px;
+    width: 70%;
+    margin: 0px auto;
+    text-align: justify;
+   
+}
+
+.accordion {
+    background-color: blue;
+  }
+  
+  .card {
+    background-color: lightblue;
+  }
+
+  .imagenAcordion{
+     width: 130px;
+  }
+  
+  .menu{
+    font-size: 20px;
+  }
+
+  
+  .containerContenido{
+    display: flex; 
+  
+  }
+  
+  .rowContenido{
+   margin: 0px auto;
+    width: 95%;
+  
+  
+  }
+  
+  .imagenCredito{
+    width: 230px;
+  }
+  
+  .col-md-12{
+    
+    margin-bottom: 50px;
+     text-align: justify;
+    font-size: 20px;
+  
+  
+  }
+  
+  .active{
+    background: rgb(18, 160, 82);
+  }
+  
+  
+  .accordion-button{
+  
+    font-size: 18px;
+    font-weight: bold;
+    color:  rgb(20, 95, 45);
+  }
+  
+  .accordion-item .accordion-button[aria-expanded="true"] {
+    background-color:   rgb(20, 95, 45);
+    color:white;
+   
+  }
+
+  .col-md-12{
+    
+    margin-bottom: 50px;
+     text-align: justify;
+    font-size: 20px;
+  
+  
+  }
+  
+  .accordion-body{
+    width: 70%;
+    margin: 0px auto;
+  }
+  strong{
+    color:  rgb(20, 95, 45);
+  }
+
+  @media screen and (max-width: 800px){
+
+    .container{ 
+      height: 320px;
+  }
+
+    .row{
+      width: 100%;
+      margin: 0px auto;
+      padding-top: 70px;
+    }
+
+    .col-md-4{
+      width: 100%;
+      margin-top: 0% !important;
+    
+    }
+
+    #col{
+      width: 100%;  
+  }
+
+  .labelCredito{
+    font-family: 'Caprasimo';
+    font-size: 30px;
+    padding: 10px;
+    border-bottom: 5px solid rgb(255, 255, 255);
+    text-align: center;
+    width: 100%;
+    margin: 0px auto;
+    
+
+   
+}
+
+.labelCreditoParrafo{
+    font-size: 18px;
+    margin-left: 50px;
+    width: 100%;
+    margin: 0px auto;
+    text-align: justify;
+   
+}
+
+.imagenCredito{
+  display: none;
+}
+
+.accordion-button{
+  
+    font-size: 18px;
+    font-weight: bold;
+    color:  rgb(20, 95, 45);
+  }
+
+  .accordion-body{
+    width: 100%;
+    margin: 0px auto;
+    font-size: 18px;
+  }
+
+.imagenAcordion{
+  width: 90px;
+}
+    
+  }

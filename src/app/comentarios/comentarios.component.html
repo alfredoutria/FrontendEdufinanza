@@ -1,0 +1,109 @@
+
+<div class="container">
+    
+    <div class="row">
+        <label class="tituloComentario">Danos tu opinión</label>
+        <div class="divRegistrarse" [hidden]="divRegistrarse" >
+        <label class="subtituloComentario">Para opinar registrate por favor para que desactives el boton enviar y asi nos puedas dar tu opinión</label>
+       <div class="divboton" ><button type="button" class="btn btn-success" id="boton"><a class="nav-link" href="registrarse">Registrarse</a></button></div> 
+        <div class="divboton" ><button type="button" class="btn btn-success" id="boton"><a class="nav-link" href="sesion">Iniciar Sesión</a></button></div>
+    </div>
+        <div class="col-9"  >
+         <form>
+            <input  id="nombre" class="nombre" name="nombre"  [(ngModel)]="this.Nombre" required >
+            <textarea class="form-control" id="FormControlTextarea" rows="3"  name="comentario" [disabled]="ActivacionComentarios" [(ngModel)]="formu.comentario" required  ></textarea>
+            <div class="div_botonEnviar"><button type="button" class="btn btn-success" [disabled]="ActivacionComentarios" (click)="enviar()">Enviar</button></div>
+        </form>
+        </div>
+    </div>
+</div>
+
+ <!-- Modal -->
+ <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Actualizar Comentario</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+              <label for="recipient-name" class="col-form-label"><strong>Usuario:</strong><label class="labelNombre">{{Nombre}}</label></label>
+
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label"><strong>Comentario</strong></label>
+                  <div class="divTexarea">
+                  <textarea type="text" class="textarea" id="recipient-name" rows="3" name="comentario" [(ngModel)]="formu.MostrarComentario" required></textarea>
+                </div>
+                </div>
+              </form>
+        </div>
+        <div class="DivBotonComentario">
+          <button type="button" class="btn btn-success" (click)="ActualizarComentario()" data-bs-dismiss="modal">Actualizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Actualizar Comentario</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+              <label for="recipient-name" class="col-form-label"><strong>Usuario:</strong><label class="labelNombre">{{Nombre}}</label></label>
+
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label"><strong>Comentario</strong></label>
+                  <div class="divTexarea">
+                  <textarea type="text" class="textarea" id="recipient-name" rows="3" name="comentario" [(ngModel)]="formu.MostrarComentario" required></textarea>
+                </div>
+                </div>
+              </form>
+        </div>
+        <div class="DivBotonComentario">
+          <button type="button" class="btn btn-success" (click)="ActualizarComentario()" data-bs-dismiss="modal">Actualizar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalEliminar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Estas seguro que quieres eliminar este comentario?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+              <label for="recipient-name" class="col-form-label"><strong>Usuario:</strong><label class="labelNombre">{{Nombre}}</label></label>
+
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label"><strong>Comentario</strong></label>
+                  <div class="divTexarea">
+                  <textarea type="text" class="textarea" rea id="recipient-name" rows="3" name="comentario" [(ngModel)]="formu.MostrarComentario" required></textarea>
+                </div>
+                </div>
+              </form>
+        </div>
+        <div class="DivBotonComentario">
+          <button type="button" class="btn btn-danger" (click)="EliminarComentario()" data-bs-dismiss="modal">Eliminar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="divComentarios">Comentarios</div>
+  <div class="container"  *ngFor="let comentarioItem of comentarioArray">
+    <label class="labelUsuario">{{comentarioItem.usuario}}</label><label class="labelHoraFecha">{{comentarioItem.fechaHora | date: 'medium'}}</label>
+    <p>{{comentarioItem.comentario}}</p>
+    <button type="button" class="btn btn-success" [hidden]=" ActivarBotonCrud" *ngIf="Nombre == comentarioItem.usuario"  data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="Actualizar(comentarioItem)" >Actualizar</button>
+    <button type="button" class="btn btn-danger" [hidden]=" ActivarBotonCrud" *ngIf="Nombre == comentarioItem.usuario" data-bs-toggle="modal" data-bs-target="#modalEliminar" (click)="Eliminar(comentarioItem)">Eliminar</button>
+  </div>

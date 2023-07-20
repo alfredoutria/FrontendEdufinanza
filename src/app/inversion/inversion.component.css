@@ -1,0 +1,178 @@
+.container{
+    background: rgb(211, 103, 3);
+    max-width: 100%;
+    width: 100%;
+    height: 400px;
+    color:yellow;
+
+}
+
+.row{
+  margin: 0px auto;
+  width: 80%;
+
+}
+
+.col-md-4{
+    margin-top: 5%;
+    padding-top: 20px;
+
+  
+}
+
+
+.labelInversion{
+    font-family: 'Caprasimo';
+    font-size: 70px;
+    border-left: 10px solid yellow;
+    padding: 10px;
+    width: 70%;
+    padding-top: 50px;
+    height: 100%;
+   
+}
+
+.labelInversionParrafo{
+    font-size: 25px;
+    margin-left: 50px;
+   
+}
+
+.imagenInversion{
+  width: 230px;
+}
+
+.imagenAcordion{
+  width: 130px;
+}
+
+.accordion {
+    background-color: blue;
+  }
+  
+  .card {
+    background-color: lightblue;
+  }
+  
+  .menu{
+    font-size: 20px;
+  }
+  /*
+  .div_menu{
+    border: 1px solid green;
+  }*/
+  
+  .containerContenido{
+    display: flex; 
+  
+  }
+  
+  .rowContenido{
+   margin: 0px auto;
+    width: 95%;
+  
+  
+  }
+  
+  
+  .col-md-12{
+    
+    margin-bottom: 50px;
+     text-align: justify;
+    font-size: 20px;
+  
+  
+  }
+  
+  .active{
+    background: rgb(18, 160, 82);
+  }
+  
+  
+  .accordion-button{
+  
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(209, 143, 20);
+  }
+  
+  .accordion-item .accordion-button[aria-expanded="true"] {
+    background-color: rgb(231, 137, 13);
+    color:white;
+   
+  }
+  
+  .accordion-body{
+    width: 70%;
+    margin: 0px auto;
+  }
+  strong{
+    color: rgb(241, 159, 6);
+  }
+
+  @media screen and (max-width: 800px){
+
+    .container{
+    background: rgb(211, 103, 3);
+    max-width: 100%;
+    width: 100%;
+    height: 320px;
+    color:yellow;
+  
+  }
+  
+    .row{
+      width: 100%;
+      padding-top: 30px;
+      
+    }
+  
+    .col-md-4{
+      width: 100%;
+      margin-top: -2px;
+      padding-top: 0px;
+    
+  }
+  
+  .labelInversion{
+    font-family: 'Caprasimo';
+    font-size: 30px;
+    border-left: none;
+    border-bottom: 10px solid yellow;
+    padding: 10px;
+    width: 100%;
+    padding-top: 50px;
+    
+  }
+  
+  .labelInversionParrafo{
+      font-size: 18px;
+      width: 100%;
+      margin-top: 10px;
+      margin-left: 0px;
+      
+     
+     
+  }
+  
+  .imagenInversion{
+    display: none;
+  }
+  
+  .accordion-button{
+  
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(209, 143, 20);
+  }
+  
+  .accordion-body{
+    font-size: 18px;
+    width: 100%;
+  }
+  
+  .imagenAcordion{
+    width: 100px;
+  }
+    
+  }

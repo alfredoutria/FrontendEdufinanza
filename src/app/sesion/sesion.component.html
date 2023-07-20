@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6" id="imagenDerecha">
+
+    </div>
+    <div class="col-md-6">
+      <label class="labelFormulario">Iniciar Sesion</label>
+
+      <div class="divGrupo">
+        <label for="staticEmail">Email</label>
+
+        <input type="text" class="form-control" id="campoInput"
+          [ngStyle]="{'background': inputBackground,'color': color}" [(ngModel)]="email" name="email" required>
+
+      </div>
+      <div class="divGrupo">
+        <label for="inputPassword">Escribe una contraseña</label>
+        <input type="password" class="form-control" id="campoInput"
+          [ngStyle]="{'background': inputBackground,'color': color}" [(ngModel)]="password" name="password" required>
+      </div>
+      <div class="divButton">
+        <button type="button" class="btn btn-success" (click)="login()">Iniciar Sesión</button>
+      </div>
+      <div class="divButton">
+        <label><a href="/registrarse">Registarse</a></label>
+      </div>
+      <div class="divButton">
+        <label><a href="/recuperar">Recuperar Contraseña</a></label>
+      </div>
+      <div class="divButton">
+        <span [hidden]="mostrar">Email y/o contraseña no son validas</span>
+      </div>
+    </div>
+  </div>
+
+</div>

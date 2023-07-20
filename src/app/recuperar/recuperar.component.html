@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row" [hidden]="recuperar">
+    <label class="labelFormulario">Recuperar Contraseña</label>
+    <img class="imagenUsuario" src="../../assets/imagenes/imagenUsuarioRecuperar.png">
+    <div class="divGrupo">
+      <label for="staticEmail">Email</label>
+      <input type="text" class="form-control" id="campoInput" [(ngModel)]="this.email">
+    </div>
+    <div class="divButton">
+      <button type="button" class="btn btn-success" id="botonAceptar" [attr.data-bs-toggle]="modal"
+        [attr.data-bs-target]="recuperar" (click)="EnviarCodigo()">Obtener Codigo</button>
+    </div>
+    <span [hidden]="this.mensajeEmail">El campo email, no puede estar vacio o tener un formato incorrecto</span>
+    <span [hidden]="this.mensajeEmailNoExiste">El correo no existe</span>
+  </div>
+
+  <div class="row" [hidden]="ActivarNuevaClave">
+    <label class="labelFormulario">Recuperar Contraseña</label>
+    <img class="imagenUsuario" src="../../assets/imagenes/imagenUsuarioRecuperar.png">
+    <div class="divGrupo">
+      <label for="staticEmail">Por favor digite el código que le enviamos a su correo electrónico</label>
+    </div>
+    <div class="divGrupo">
+      <label for="staticEmail">Codigo</label>
+      <input type="text" class="form-control" id="campoInput" [(ngModel)]="this.codigo">
+    </div>
+    <div class="divGrupo">
+      <label for="staticEmail">Nueva Contraseña</label>
+      <input type="text" class="form-control" id="campoInput" [(ngModel)]="this.clave">
+    </div>
+    <div class="divButton">
+      <button type="button" class="btn btn-success" id="botonAceptar" [attr.data-bs-toggle]="modal"
+        [attr.data-bs-target]="recuperar" (click)="ActualizarClave()">Crear Contraseña</button>
+    </div>
+    <span [hidden]="this.claveGuardada">Nueva contraseña guardada exitosamente</span>
+    <span [hidden]="this.mensajeNoExiste">El codigo no es valido</span>
+    <span [hidden]="this.mensajeVacio">No puedo haber campos vacios</span>
+  </div>
+
+</div>

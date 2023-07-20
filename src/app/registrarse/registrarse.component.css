@@ -1,0 +1,94 @@
+.container {
+    padding-top: 75px;
+    padding-bottom: 100px;
+    max-width: 100%;
+    width: 100%;
+    
+    background: rgb(6, 155, 118);
+
+}
+
+.row {
+    width: 30%;
+    margin: 0px auto;
+    margin-bottom: 100px;
+    padding: 30px;
+    border-radius: 10px;
+    -webkit-box-shadow: -1px 0px 18px -3px rgba(28, 79, 11, 1);
+    -moz-box-shadow: -1px 0px 18px -3px rgba(28, 79, 11, 1);
+    box-shadow: -1px 0px 18px -3px rgba(28, 79, 11, 1);
+    background: rgb(2, 41, 2);
+    color:white;
+}
+
+.imagenUsuario {
+    margin: 0px auto;
+    width: 90px;
+}
+
+.divGrupo {
+    margin-top: 1px;
+    margin-bottom: 20px;
+}
+
+.labelFormulario {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 40px;
+
+}
+
+.form-control {
+    border: 1px solid rgb(190, 190, 190);
+}
+
+.divButton {
+    text-align: center;
+    width: 100%;
+
+}
+
+.btn {
+    width: 40%;
+    margin-right: 10px;
+}
+a{
+    text-decoration: none;
+    color:white;
+
+}
+
+@media screen and (max-width: 800px){
+
+
+    .row {
+        width: 100%;
+    }
+
+    .imagenUsuario {
+        margin: 0px auto;
+        margin-top: -30px;
+        width: 100px;
+    }
+
+    .labelFormulario {
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 40px;
+        width: 100%;
+    
+    }
+
+    .btn{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    
+
+    
+}
